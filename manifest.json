@@ -1,0 +1,26 @@
+{
+	"name": "Redirecting Extension",
+	"description": "It redirects to a google news when user opens google.com after 5 seconds",
+	"version":"1.0",
+	"manifest_version":2,
+
+	"icons":{
+		"128":"icon128.png",
+		"48": "icon48.png",
+		"16":"icon16.png"
+	},
+
+	"content_scripts":[
+		{
+			"matches": ["https://www.google.com/"],
+			"js": ["content.js"]
+		}
+	],
+
+	"permissions" : [
+					"tabs",
+					"https://www.google.com/"
+				] 		
+
+		
+}
